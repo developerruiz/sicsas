@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    top: 0;
+}
+.boton{
+    justify-content: center;
+    align-items: center;
+  
+}
+.boton a{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    background: #d10000;
+    color: #fff;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px 0 0;
+}
+.img-sexyland img{
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+}

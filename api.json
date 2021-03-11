@@ -1,0 +1,53 @@
+[
+    {
+        "precio": "$15.00 por pieza",
+        "id": 1,
+        "title": "Mascarilla facial KN95 Cod:ANE",
+        "thumbnailUrl": "img/productos/producto-1.png"
+
+    },
+    {
+        "precio": "$17.00 por pieza",
+        "id": 2,
+        "title": "Mascarilla facial KN95 Cod:ANI",
+        "thumbnailUrl": "img/productos/producto-2.png",
+        "muestras": {
+            "imagen1": "/img/productos/producto-2_1.png",
+            "imagen2": "/img/productos/producto-2_2.png",
+            "imagen3": "/img/productos/producto-2_3.png",
+            "imagen4": "/img/productos/producto-2_4.png",
+            "imagen5": "/img/productos/producto-2_5.png",
+            "imagen6": "/img/productos/producto-2_6.png"
+        }
+
+    },
+    {
+        "precio": "$3.00 por pieza",
+        "id": 3,
+        "title": "Cubre boca plisado tricapa",
+        "thumbnailUrl": "img/productos/producto-3.png",
+
+        "muestras": {
+            "imagen1": "/img/productos/producto-3.png",
+            "imagen2": "/img/productos/producto-3-2.png",
+            "imagen3": "/img/productos/producto-3-3.png",
+            "imagen4": "/img/productos/producto-3-4.png",
+            "imagen5": "/img/productos/producto-3-5.png"
+        }
+    }
+    ,
+    {
+        "precio": "$3.00 por pieza",
+        "id": 3,
+        "title": "Cubre boca plisado tricapa",
+        "thumbnailUrl": "img/productos/producto-4.png",
+
+        "muestras": {
+            "imagen1": "/img/productos/producto-3.png",
+            "imagen2": "/img/productos/producto-3-2.png",
+            "imagen3": "/img/productos/producto-3-3.png",
+            "imagen4": "/img/productos/producto-3-4.png",
+            "imagen5": "/img/productos/producto-3-5.png"
+        }
+    }
+]
