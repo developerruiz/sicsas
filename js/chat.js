@@ -2,76 +2,63 @@ let globoChat = document.getElementById('chat')
 let globoStatus = 0
 let chatBox = document.getElementById('chat_box')
 let botonMin = document.querySelector('.fa-window-minimize')
+let botonMax = document.querySelector('.fa-window-restore')
 let contenedorPreguntas = document.getElementById('preguntas')
-// let botonServicios = document.getElementById('btn_servicios')
-// let botonProductos = document.getElementById('btn_productos')
 let pregunta = document.querySelectorAll('.pregunta')
 let respuesta = document.querySelectorAll('.respuesta')
+let botonCerrar= document.querySelector('.fa-times')
 let contenido = null
+let botonRegresar =  document.querySelectorAll('.fa-arrow-left' )
 
-// globoChat.addEventListener('click', function mostrarChat() {
+globoChat.addEventListener('click', function () {
+    mostrarChat: {
+        chatBox.className = chatBox.className + (' active')
+    }
+        globoStatus = 1
+        globoChat.classList = ('d-none')
+    for (let i = 0; i < pregunta.length; i++) {
+        pregunta[i].addEventListener('click', evento);
+    }
+  
+    for (let i = 0; i < botonRegresar.length; i++) {
+        botonRegresar[i].addEventListener('click', regresar)
+    
+    }
+})
 
-//     mostrarChat: {
-//         chatBox.className = chatBox.className + (' active')
-//     }
+evento = function (e) {
+    e.preventDefault();
+    for (let i = 0; i < respuesta.length; i++) {
+        respuesta[i].className = '';
 
-
-
-//     if (globoStatus === 0) {
-//         globoStatus = 1
-//         globoChat.classList = ('d-none')
-//     } else
-//         globoStatus = 0
-
-
-//     for (let i = 0; i < pregunta.length; i++) {
-//         pregunta[i].addEventListener('click', evento () {
-
-
-//         })
-
-//     }
-
-// })
-// evento=() =>{
-//     for (let i = 0; i < respuesta.length; i++) {
-//         console.log(contenido= this.getAttribute('div'))
-//     }
-// //    for (let i = 0; i < respuesta.length; i++) {
-// //     console.log()
-// //    }
-//     contenedorPreguntas.classList = ('d-none')
-// }
-
-inicio = function () {
-        globoChat.addEventListener('click', function () {
-            mostrarChat: {
-                chatBox.className = chatBox.className + (' active')
-            }
-            if (globoStatus === 0) {
-                globoStatus = 1
-                globoChat.classList = ('d-none')
-
-            } else
-                globoStatus = 0
-
-            for (let i = 0; i < pregunta.length; i++) {
-                pregunta[i].addEventListener('click', evento);
-            }
-
-        })
-    },
-    evento = function(){
-        for (let i = 0; i < respuesta.length; i++) {
-            // respuesta[i].className = ''
-            console.log(respuesta)
-        }
-        contenedorPreguntas.classList = ('d-none')
     }
 
-    inicio()
+    this.parentElement.className = 'active';
+    contenido = this.getAttribute('href');
+    document.querySelector(contenido).className = 'd-block'
+    contenedorPreguntas.classList = ('d-none')
 
-botonMin.addEventListener('click', function () {
-    // console.log(chatBox.classList = ('chat-box min') )
+}
+regresar = function() {
+    contenedorPreguntas.classList = ('preguntas text-center')
+    document.querySelector(contenido).className = 'd-none'
+}
+
+botonMin.addEventListener('click', () => {
     chatBox.classList = ('chat-box min')
 })
+
+botonMax.addEventListener('click', () =>{
+    botonMax.style.cursor = 'pointer';
+    chatBox.classList = ('chat-box active')
+})
+
+botonCerrar.addEventListener('click', () =>{
+    botonCerrar.style.cursor = 'pointer';
+    chatBox.classList = 'chat-box'
+    globoChat.classList = ('chat')
+    globoStatus = 0
+    console.log(botonCerrar)
+    
+})
+

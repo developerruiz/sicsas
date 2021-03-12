@@ -4806,11 +4806,10 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   bottom: 0px;
   right: 10px;
   z-index: 99999;
-  width: 350px;
+  width: 400px;
   height: 425px;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
-  overflow-y: scroll;
 }
 .chat-box.active{
   display: block;
@@ -4826,7 +4825,9 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   
   width: 100%;
   height: 80px;
-  background: #1c92d2;
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 10px 10px 0 0;
   align-items: center;
   display: flex;
@@ -4845,6 +4846,14 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   color: #fff;
   font-size: 25px;
 }
+.fa-window-restore{
+  color: #fff;
+  font-size: 25px;
+}
+.fa-arrow-left{
+  font-size: 25px;
+  cursor: pointer;
+}
 /* FIN ICONOS */
 .barra-chatbox div> span{
   color: #fff;
@@ -4856,15 +4865,13 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
 .preguntas{
   display: block;
 }
-.respuesta{
-  display: none;
+.pregunta{
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: none;
 }
-
-.respuesta.active{
-  display: block;
-}
-
-.chat-box div:nth-child(3)> i:nth-child(1){
+.chat-box div:nth-child(3)> i{
   cursor: pointer;
 }
 /* FIN DE CHAT */
