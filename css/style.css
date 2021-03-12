@@ -4769,7 +4769,7 @@ footer {
 /* CHAT */
 
 .chat {
-  display: none;
+  display: flex;
   cursor: pointer;
   align-items: center;
   position: fixed;
@@ -4780,17 +4780,16 @@ footer {
   width: 200px;
   border-radius: 35px;
   justify-content: space-around;
-  background: #1c92d2;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f2fcfe, #1c92d2);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: 0 5px 12px 8px rgba(0, 0, 0, 0.2);
 }
 
 .chat span {
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 
 .chat div>i {
@@ -4801,7 +4800,7 @@ footer {
 /* CHATBOX */
 .chat-box {
   background: #f0f0f0;
-  display: block;
+  display: none;
   align-items: center;
   position: fixed;
   bottom: 0px;
@@ -4810,11 +4809,21 @@ footer {
   width: 350px;
   height: 425px;
   border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.chat-box.active{
+  display: block;
+}
+.chat-box.min{
+  display: block;
+  height: 80px;
 }
 .chat-box:nth-child(3){
   margin-bottom: -20;
 }
 .barra-chatbox {
+  
   width: 100%;
   height: 80px;
   background: #1c92d2;
@@ -4823,6 +4832,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
 }
+/* ICONOS */
 .fa-user-circle{
   color: #fff;
   font-size: 50px;
@@ -4831,6 +4841,11 @@ footer {
   color: #fff;
   font-size: 25px;
 }
+.fa-times{
+  color: #fff;
+  font-size: 25px;
+}
+/* FIN ICONOS */
 .barra-chatbox div> span{
   color: #fff;
   font-size: 15px;
@@ -4839,18 +4854,16 @@ footer {
   margin: 20px;
 }
 .preguntas{
-  display: none;
-}
-.respuesta-1{
-  display: none;
-}
-.respuesta-2{
-  display: none;
-}
-.respuesta-2.active{
   display: block;
-  
 }
+.respuesta{
+  display: none;
+}
+
+.respuesta.active{
+  display: block;
+}
+
 .chat-box div:nth-child(3)> i:nth-child(1){
   cursor: pointer;
 }

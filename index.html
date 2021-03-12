@@ -128,7 +128,7 @@
 </div> -->
 	<!--================ Home Banner Area =================-->
 
-	<div class="chat">
+	<div class="chat" id="chat">
 		<div>
 			<span>Chat</span>
 		</div>
@@ -137,7 +137,7 @@
 		</div>
 	</div>
 
-	<div class="chat-box">
+	<div class="chat-box" id="chat_box">
 		<div class="barra-chatbox">
 			<div>
 				<i class="fas fa-user-circle"></i>
@@ -147,6 +147,7 @@
 			</div>
 			<div>
 				<i class="fas fa-window-minimize"></i>
+				<!-- <i class="fas fa-times"></i> -->
 			</div>
 		</div>
 		<div class="contenedor-chatbox">
@@ -155,13 +156,14 @@
 					sapiente?</p>
 
 				<div class="preguntas text-center mt-5">
-					<button class="btn btn-primary col-8 my-3 p-2" type="button" id="pregunta_1">Servicios</button>
-					<button class="btn btn-primary col-8 my-3 p-2" type="button" id="pregunta_2">Productos</button>
+					<button class="btn btn-primary col-8 my-3 p-2 pregunta" type="button" id="pregunta">Servicios</button>
+
+					<button class="btn btn-primary col-8 my-3 p-2 pregunta" type="button" id="pregunta">Productos</button>
 				</div>
 			</div>
 
-			<div class="respuesta-1" id="res-1">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores dolores alias rerum,
+			<div class="respuesta" id="res-1">
+				<p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores dolores alias rerum,
 					aut, ullam saepe, commodi architecto possimus sed cumque dolorum? Commodi consequatur cupiditate
 					quos, pariatur nihil harum ad.</p>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#">servicios sicsas</a></p>
@@ -170,8 +172,8 @@
 				<span>¡Muchas gracias!</span>
 			</div>
 
-			<div class="respuesta-2 active" id="res-2">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores dolores alias rerum,
+			<div class="respuesta" id="res-2">
+				<p>2Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat asperiores dolores alias rerum,
 					aut, ullam saepe, commodi architecto possimus sed cumque dolorum? Commodi consequatur cupiditate
 					quos, pariatur nihil harum ad.</p>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#">servicios sicsas</a></p>
@@ -783,7 +785,7 @@
 	<script src="js/main-menu.js"></script>
 	<script src="js/animate-it.js"></script>
 	<script src="js/main.js"></script>
-
+	<script src="js/chat.js"></script>
 
 </body>
 
