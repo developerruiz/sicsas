@@ -4765,9 +4765,9 @@ footer {
   width: 30px;
   height: 30px;
 }
+/* FIN VENTANA MODAL EMERGENTE */
 
 /* CHAT */
-
 .chat {
   display: flex;
   cursor: pointer;
@@ -4783,9 +4783,10 @@ footer {
   background: #ff00cc;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   box-shadow: 0 5px 12px 8px rgba(0, 0, 0, 0.2);
+
 }
+
 
 .chat span {
   font-size: 20px;
@@ -4807,7 +4808,7 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   right: 10px;
   z-index: 99999;
   width: 400px;
-  height: 425px;
+  height: 480px;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
@@ -4833,6 +4834,9 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   display: flex;
   justify-content: space-evenly;
 }
+.contenedor-chatbox p,span{
+  font-size: 20px;
+}
 /* ICONOS */
 .fa-user-circle{
   color: #fff;
@@ -4846,6 +4850,7 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
   color: #fff;
   font-size: 25px;
 }
+
 .fa-window-restore{
   color: #fff;
   font-size: 25px;
@@ -4862,20 +4867,35 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
 .contenedor-chatbox{
   margin: 20px;
 }
-.preguntas{
-  display: block;
-}
+
 .pregunta{
   background: #ff00cc;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 border: none;
 }
-.chat-box div:nth-child(3)> i{
+
+.chat-box div:nth-last-child(1)> i{
+  cursor: pointer;
+}
+.chat-box div:nth-last-child(2)> i{
+  cursor: pointer;
+}
+.chat-box div:nth-last-child(3)> i{
   cursor: pointer;
 }
 /* FIN DE CHAT */
-/* FIN VENTANA MODAL EMERGENTE */
+
+
+@media screen and (max-width:768px){
+  .chat-box{
+    left: 0!important;
+    width: 100%;
+  }
+}
+
+
+
 @media screen and (max-width:970px) {
   .fondo-revive {
     background-image: none;
