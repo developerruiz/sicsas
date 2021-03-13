@@ -89,5 +89,8 @@ botonCerrar.addEventListener('click', () =>{
     globoChat.style.opacity = 0
     globoStatus = 0 
 
+    setTimeout(function(){
+        globoChat.style.opacity = 1
+    })
 
 })
